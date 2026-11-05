@@ -64,3 +64,15 @@ mvn test -Denv=qa -Dapi.base-url=http://127.0.0.1:8081
 - Límite diario de transferencias.
 - Cuenta de origen bloqueada.
 - Monto cero.
+
+## Principios SOLID
+
+1. **S – Single Responsibility Principle:** Cada clase debe tener una única responsabilidad y una sola razón para cambiar.
+
+2. **O – Open/Closed Principle:** El código debe permitir extender funcionalidades sin modificar el código existente.
+
+3. **L – Liskov Substitution Principle:** Las clases hijas deben poder reemplazar a sus clases padre sin alterar el comportamiento esperado.
+
+4. **I – Interface Segregation Principle:** Las interfaces deben ser pequeñas y específicas. No obligar a implementar métodos que no se necesitan.
+
+5. **D – Dependency Inversion Principle:** Depender de abstracciones, no de implementaciones concretas. 
