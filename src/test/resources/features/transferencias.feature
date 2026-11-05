@@ -2,7 +2,7 @@
 Feature: Bank transfers
   As a bank customer
   I want to transfer money between accounts
-  So that I can move my funds securely
+  So that I can move my funds securely and safe
 
   Background:
     Given a source account with a balance of 10000
