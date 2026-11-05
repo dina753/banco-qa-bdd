@@ -41,6 +41,14 @@ Para validar que Cucumber encuentra los escenarios y enlaza todos los pasos sin 
 mvn test -Dcucumber.execution.dry-run=true
 ```
 
+Para ejecutar solo el escenario de transferencia con fondos insuficientes:
+
+```bash
+mvn test -Dcucumber.filter.name="Rechazar transferencia superior al saldo disponible"
+```
+
+En VS Code, abre una terminal integrada en la carpeta `banco-qa-bdd`, inicia la API como se indica arriba y ejecuta ese comando.
+
 ## Ejecutar en UAT
 
 Configura `api.base-url` en `src/test/resources/config/uat.properties` y ejecuta:
@@ -60,7 +68,7 @@ mvn test -Denv=qa -Dapi.base-url=http://127.0.0.1:8081
 ## Escenarios cubiertos
 
 - Transferencia correcta y actualización de ambos saldos.
-- Saldo insuficiente.
+- Saldo insuficiente, con verificación de que ambos saldos permanecen intactos.
 - Límite diario de transferencias.
 - Cuenta de origen bloqueada.
 - Monto cero.
